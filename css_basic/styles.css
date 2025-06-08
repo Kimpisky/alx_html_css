@@ -1,0 +1,131 @@
+/* styles.css */
+
+/* --- Overall Body Layout --- */
+body {
+    display: flex; /* Enables Flexbox for direct children (header, main, footer) */
+    flex-direction: column; /* Stacks children vertically */
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height, allowing main to stretch */
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #f8f9fa; /* Light background for header */
+    padding: 10px 20px; /* Padding inside the header */
+    border-bottom: 1px solid #e0e0e0; /* Subtle border at the bottom */
+}
+
+header ul {
+    list-style: none; /* Removes bullet points from the list */
+    display: flex; /* Arranges list items horizontally */
+    align-items: center; /* Vertically aligns items in the center */
+    gap: 20px; /* Space between navigation items */
+}
+
+/* --- New: Logo Styling in Header --- */
+header ul .logo {
+    font-size: 2.5em; /* Make the unicode character larger for a logo effect */
+    color: #9253c5; /* Example purple color, matching a common theme color */
+    padding-right: 10px; /* Add some space to the right of the logo */
+    line-height: 1; /* Ensures vertical alignment is clean */
+}
+
+/* --- Main Content Area Layout --- */
+main {
+    display: flex; /* Enables Flexbox for its direct children (article, aside) */
+    flex-direction: row; /* Arranges article and aside horizontally */
+    flex-grow: 1; /* Allows 'main' to expand and fill all available vertical space between header and footer */
+    overflow-y: auto; /* Enables vertical scrolling within 'main' if content inside 'article' or 'aside' overflows */
+}
+
+/* --- Article Styling --- */
+article {
+    flex: 3; /* Allows 'article' to take 3 parts of the available space, relative to 'aside' (3/4 of total) */
+    padding: 20px; /* Padding inside the article content */
+    background-color: #ffffff; /* White background for the main content area */
+    border-right: 1px solid #e0e0e0; /* Visual separator between article and aside */
+}
+
+/* --- Aside Styling --- */
+aside {
+    flex: 1; /* Allows 'aside' to take 1 part of the available space, relative to 'article' (1/4 of total) */
+    padding: 20px; /* Padding inside the aside content */
+    background-color: #f0f0f0; /* Slightly grey background for the aside */
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #f8f9fa; /* Light background for footer */
+    padding: 10px 20px; /* Padding inside the footer */
+    border-top: 1px solid #e0e0e0; /* Subtle border at the top */
+    text-align: center; /* Centers text within the footer */
+}
+
+/* --- Specific Content Styling for Readability --- */
+/* Styles for elements within article to ensure they are well-presented */
+article h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+article h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #555;
+}
+
+article img {
+    max-width: 100%; /* Ensures images scale down if larger than their container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra space below image */
+    margin-bottom: 20px;
+}
+
+article table {
+    width: 100%; /* Makes table take full width of article */
+    border-collapse: collapse; /* Collapses table borders */
+    margin-top: 20px;
+}
+
+article th,
+article td {
+    border: 1px solid #ddd; /* Borders for table cells */
+    padding: 8px; /* Padding inside cells */
+    text-align: left; /* Aligns text to the left */
+}
+
+article th {
+    background-color: #f2f2f2; /* Light background for table headers */
+}
+
+/* Styles for elements within aside */
+aside p {
+    font-style: italic; /* Italic text for the placeholder comment */
+    color: #666;
+}
+
+/* Ensure links in header and article are visible against their backgrounds */
+header a,
+article a {
+    color: #0056b3; /* A darker blue for links in light sections */
+}
+
+/* --- Responsive Adjustments from previous steps --- */
+/* The class "works_on_smartphone" was added to the body but no specific CSS rules
+   were provided for it in the prompt, so general responsiveness relies on
+   the viewport meta tag and existing fluid layouts. */
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack article and aside vertically on smaller screens */
+    }
+
+    article, aside {
+        flex: none; /* Remove flex sizing */
+        width: 100%; /* Take full width */
+        border-right: none; /* Remove border between them when stacked */
+        border-bottom: 1px solid #e0e0e0; /* Add border at bottom for separation */
+    }
+    aside {
+        border-bottom: none; /* No bottom border for the last stacked item */
+    }
+}

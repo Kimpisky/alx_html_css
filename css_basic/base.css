@@ -1,0 +1,25 @@
+/* base.css */
+
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Default body styles */
+body {
+    font-family: Arial, sans-serif; /* A common, readable font */
+    line-height: 1.6; /* Improves readability of text */
+    color: #333; /* Default dark grey text color for general content */
+}
+
+/* Basic link styling for readability */
+a {
+    color: #007bff; /* A standard blue for links */
+    text-decoration: none; /* Removes underline by default */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for interactivity */
+}
