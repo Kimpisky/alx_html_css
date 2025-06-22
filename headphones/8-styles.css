@@ -1,0 +1,434 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+.header {
+    background-image: url('images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav .logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Updated selector for navigation links wrapper */
+.nav-links-wrapper {
+    display: flex; /* Default to flex for larger screens */
+    align-items: center;
+}
+
+.nav-links-wrapper a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.call-to-action-button {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+}
+
+.what-we-do {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.what-we-do h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.what-we-do-text {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    line-height: 1.6;
+    color: #555;
+}
+
+.what-we-do-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.what-we-do-item {
+    flex-basis: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.what-we-do-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.what-we-do-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.what-we-do-item p {
+    color: #777;
+    line-height: 1.5;
+}
+
+.our-results {
+    background-image: url('images/headphones_hero_2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.our-results h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.our-results-text {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.results-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Updated CSS for Pentagon Shape using background image (Increased size) */
+.result-item {
+    background-color: transparent; /* Ensure no residual background */
+    background-image: url('images/pentagone.png'); /* IMPORTANT: Ensure this path is correct */
+    background-size: contain; /* Scales the image to fit without cropping */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image within the item */
+    position: relative; /* For text positioning */
+    width: 200px; /* Increased width for better text containment */
+    height: 190px; /* Increased height, maintaining aspect ratio roughly */
+    margin: 0 10px; /* Add some margin for spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color remains white */
+    text-align: center;
+}
+
+/* Content styling inside the pentagon */
+.result-item h3 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    position: relative; /* Keep text above background image */
+    z-index: 1;
+}
+
+.result-item p {
+    font-size: 1.1em;
+    position: relative; /* Keep text above background image */
+    z-index: 1;
+    margin: 0;
+}
+/* End of Pentagon CSS */
+
+.contact-us {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.contact-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.footer {
+    background-color: #1a2238;
+    color: white;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* This targets the div containing the logo AND the social icons in the footer */
+.footer > div:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.footer .logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.footer-social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer-social-icons a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.footer-social-icons a img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 0.9em;
+    color: #aaa;
+    width: 100%;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none; /* Hidden by default on larger screens */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 100; /* Ensure it's above other content */
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger menu animation for 'open' state */
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links-wrapper {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .nav-links-wrapper a {
+        margin: 0; /* Reset margin from larger screens */
+    }
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .what-we-do-item {
+        flex-basis: 45%;
+    }
+    .result-item { /* Keep this for overall grid layout */
+        flex-basis: 45%;
+        width: 180px; /* Increased for medium screens */
+        height: 170px; /* Increased for medium screens */
+    }
+    .footer {
+        gap: 20px;
+        padding: 20px;
+    }
+    /* Updated selector for the div containing logo and social icons within footer */
+    .footer > div:first-child {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+    }
+    .footer-social-icons {
+        margin-left: 0;
+    }
+    .footer-social-icons a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hamburger-menu {
+        display: flex; /* Show hamburger on small screens */
+    }
+    .nav-links-wrapper {
+        display: none; /* Hide full navigation by default on small screens */
+        position: absolute;
+        top: 80px; /* Adjust based on your header height */
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9); /* Dark overlay for menu */
+        flex-direction: column;
+        padding: 20px 0;
+        z-index: 99; /* Below hamburger, above other content */
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        transform: translateY(-100%); /* Start off-screen */
+        opacity: 0;
+        pointer-events: none; /* Disable clicks when hidden */
+    }
+    .nav-links-wrapper.active {
+        display: flex; /* Show when active */
+        transform: translateY(0); /* Slide in */
+        opacity: 1;
+        pointer-events: all; /* Enable clicks */
+    }
+    .nav-links-wrapper a {
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .nav-links-wrapper a:last-child {
+        border-bottom: none;
+    }
+
+    .nav {
+        flex-direction: row; /* Keep logo and hamburger on one row */
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: relative; /* For absolute positioning of menu wrapper */
+    }
+
+    .what-we-do-item {
+        flex-basis: 90%;
+    }
+    .result-item { /* Keep this for overall grid layout */
+        flex-basis: 90%;
+        width: 150px; /* Even smaller for very small screens, but larger than previous */
+        height: 140px; /* Even smaller for very small screens, but larger than previous */
+    }
+    .contact-form {
+        padding: 0 20px;
+    }
+}
